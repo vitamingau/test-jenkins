@@ -17,7 +17,7 @@ pipeline {
 		}
 		stage('ssh server'){
 			steps{
-				sshagent(['979f0abc-9a4c-424d-b941-8b55ee3f95f3']) {
+				sshagent(['sshroot']) {
     				sh 'ssh -o StrictHostKeyChecking=no -l root 34.126.105.248 touch test.txt'
     			}
 			}
