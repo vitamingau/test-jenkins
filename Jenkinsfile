@@ -10,8 +10,8 @@ pipeline {
 		stage('Clone stage'){
 			steps {
 				withDockerRegistry(credentialsId: 'docker-hub', url: 'https://index.docker.io/v1/') {
-					sh 'docker build -t phuphan/test-jenkins-pipeline:v10'
-					sh 'docker push -t phuphan/test-jenkins-pipeline:v10'
+					sh 'docker build -t phuphan/test-jenkins-pipeline:v1 .'
+					sh 'docker push phuphan/test-jenkins-pipeline:v1'
 				}
 			}
 		}
